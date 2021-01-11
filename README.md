@@ -1,2 +1,2 @@
-# app-ideas
-Some ideas of apps
+# Some development ideas
+Some ideas of apps and other stuff

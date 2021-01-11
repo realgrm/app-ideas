@@ -1,0 +1,102 @@
+# Flatpak analytics
+	- 
+data analisys
+(some examples)
+		- answer some questions
+			- what errors most occur with my app
+				- what's the hardware was used when it occurried
+			- a lot of issues of my app is about performance.
+				- What is the hardware people generaly use
+		- about hardware/ software and configurations
+			- I am currently unable to maintain my app as it has a wide range of hardaware that it has to support and it takes too much of my time. I need to choose something to focus on.
+				- as my app has an free and open license, if someone wants, they can fork to support these old hardwares
+			- I'm constantly recieving issues about performance.
+				- let me see the common erros in the logs and relate to the hardware/ software/ config to see if I can find any incompatibility
+		- abou logs
+			- I'm constantly recieving issues about a feature in my app. What are a constant error message?
+				- Is this hardware related?
+			- for how long or how many times people use my app daily? Is it more or less than before?
+				- What can I do to improve? What are the common requests of users? What is the profile of people who use my app?
+		- about user info
+			- what is the profile of people who use my app?
+				- what can i do to reach more people?
+				- I plan to add a feature X to my app. May this  negatively influence the consumers?
+	- how would it work?
+		- user can choose to flatpak to send the report
+			- automatcally
+			- only after user review
+				- prompt user periodically
+				- on demand
+			- never
+		- user can enable/ disable all infos to send at anytime
+			- one by one
+			- all at once
+			- for one app
+			- for all apps at once
+		- the report is read only for the user
+			- to try to prevent fake info
+		- user can preview or export the report on demand
+			- to send a issue to the developer, for example
+		- all the info given should respect the privacy laws
+			- all info should be anonimous
+		- it would be a portal to system
+			- the developer must specify what information will be requested by default
+				- the users configuration should override the requested info without additional configuration
+	- data
+		- additional info
+(user input)
+			- sex
+			- age
+				- the user may give the date of birth
+					- so it can update automatically
+					- the app can only acess the year (or age)
+			- ethny?
+			- ...
+		- user info
+(internet)
+			- country
+		- hardware/ software
+(e.g neofetch+something)
+			- CPU model
+			- GPU model
+			- memory size
+			- memory speed
+			- HD or SSD speed
+			- monitor resolution
+			- OS
+			- Kernel
+			- DE
+			- WM
+			- WM Theme
+			- Theme
+			- Icons
+		- log id
+			- relates to the log info
+		- system log
+(e.g. journalctl)
+			- grep appID
+			- sed $USER HIDDEN
+			- user add rules
+				- info hidden
+					- grep -v
+					- terms
+					- hide all lines of the log that matches a term
+				- info anonimized
+					- sed term HIDDEN
+					- replace the term with a defaut string as "HIDDEN", to mantain anonymity, but still give the developer the info of the matching lines
+	- why
+		- create a stardard way to developers to collect data
+			- it may discourage developers to create or mantain in it's code a way to collect data
+				- from a random developer it may
+					- implement in a insecure way
+					- disrespect the user's privacy
+						- without user consent
+				- because
+					- may take efford to upgrade an app and mantain some features
+					- the tool will already exist natively
+		- give the developers tools to improve user experience
+		- create a differencial to flatpaks
+			- more developers may be interest to port to flatpak
+			- and upload to flathub
+		- flathub can implement useful dashboards by default
+			- and charge for the dashboard?
